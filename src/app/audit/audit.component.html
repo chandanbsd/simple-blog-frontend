@@ -1,0 +1,15 @@
+<div>
+    @for (post of posts; track post.id) {
+    <mat-card id="post.id" appearance="raised"
+        style="width: 70vw; margin-left: auto; margin-right: auto; margin-top: 5px; margin-bottom: 10px;">
+        <mat-card-header></mat-card-header>
+        <mat-card-content>
+            <div style="margin-bottom: 10px; text-align: center;">
+                <h3>{{post.title}}</h3>
+            </div>
+            <div style="margin-bottom: 10px;">Content: {{post.content}}</div>
+            <div style="margin-bottom: 10px;">Author: {{post.author}}</div>
+        </mat-card-content>
+    </mat-card>
+    }
+</div>

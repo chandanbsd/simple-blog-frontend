@@ -1,0 +1,25 @@
+<div>
+    @for (post of posts; track post.id) {
+    <mat-card id="post.id" appearance="raised"
+        style="width: 70vw; margin-left: auto; margin-right: auto; margin-top: 5px; margin-bottom: 10px;">
+        <mat-card-header></mat-card-header>
+        <mat-card-content>
+            <div style="margin-bottom: 10px; text-align: center;">
+                <h3>{{post.title}}</h3>
+            </div>
+            <div style="margin-bottom: 10px;">Content: {{post.content}}</div>
+            <div style="margin-bottom: 10px;">Author: {{post.author}}</div>
+            <mat-card-actions align="end">
+                <button mat-fab extended [routerLink]="['/audit/' + post.id]" style="margin-right: 15px;">
+                    <mat-icon>history</mat-icon>
+                    Audit Trail
+                </button>
+                <button mat-fab extended [routerLink]="['/edit/' + post.id]">
+                    <mat-icon>edit</mat-icon>
+                    Edit
+                </button>
+            </mat-card-actions>
+        </mat-card-content>
+    </mat-card>
+    }
+</div>
